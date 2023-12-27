@@ -1,0 +1,30 @@
+.container {
+    height: 75%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url('../../../assets/images/login_image.png');
+    background-size: contain;
+    background-repeat:repeat-x;
+    padding: 30px; 
+}
+
+.custom-button {
+    color: white;
+    padding: 12px 24px;
+    border: 2px solid;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.signup-button {
+    background-color: #4caf50; 
+    color: white;
+}
+
+.signin-button {
+    background-color: #2196f3; 
+    color: white; 
+}

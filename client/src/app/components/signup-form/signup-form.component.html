@@ -1,0 +1,44 @@
+<div class="card rounded-3 text-black">
+    <div class="gradient-custom-2">
+        <div class="card-body">
+            <div class="text-center">
+                <h4 class="mt-1 mb-5 pb-1">Systeme d’authentification</h4>
+            </div>
+            <br><br>
+            <form [formGroup]="LoginForm" (ngSubmit)="OnFormSignup(usernameInpute.value, emailInput.value, passwordInput.value, roleInput.value)" class="form">
+                <p>Please create your account</p><br>
+                <div *ngIf="errorMsg" class="error-message">{{errorMsg}}</div>
+                <div class="form-outline mb-4" style="width: 430px;">
+                    <input #usernameInpute id="form2Example11" class="form-control" type="username" placeholder="username"
+                        formControlName="username" >
+                    <label class="form-label" for="username">User Name</label>
+                </div>
+                <br>
+                <div class="form-outline mb-4">
+                    <input #emailInput id="form2Example11" class="form-control" type="email"
+                        placeholder="example@gmail.com" formControlName="email">
+                    <label class="form-label" for="form2Example11">Email</label>
+                </div>
+                <br>
+                <div class="form-outline mb-4">
+                    <input #passwordInput id="form2Example22" class="form-control" [type]="hide ? 'password' : 'text'"
+                        placeholder="Password" formControlName="password">
+                    <label class="form-label" for="form2Example22">Password</label>
+                </div><br>
+                <mat-form-field>
+                    <mat-label>Select role</mat-label>
+                    <mat-select #roleInput>
+                      <mat-option value="option">Admin</mat-option>
+                      <mat-option value="option">USER</mat-option>
+                      <mat-option value="option">Moderator</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                <br><br>
+                <div class="text-center pt-1 mb-5 pb-1">
+                    <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" style="padding-left: 50px;" type="submit">SignUp</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
